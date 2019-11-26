@@ -46,13 +46,13 @@ echo -e "\n\n\n" \
     "********************************\n"
 URL=$(cat<<EOF | python3
 import requests
-url = 'https://api.github.com/repos/home-assistant/hassos/releases/latest'
+url = 'https://api.github.com/repos/home-assistant/hassos/releases/tags/:2.12'
 r = requests.get(url).json()
 if 'message' in r:
     exit()
 for asset in r['assets']:
     if asset['name'].endswith('vdi.gz'):
-        print(asset['https://github.com/home-assistant/hassos/releases/download/2.12/hassos_ova-2.12.vdi.gz'])
+        print(asset['browser_download_url'])
 EOF
 )
 if [ -z "$URL" ]; then
