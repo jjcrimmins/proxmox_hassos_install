@@ -51,7 +51,7 @@ r = requests.get(url).json()
 if 'message' in r:
     exit()
 for asset in r['assets']:
-    if asset['name'].endswith('vdi.gz'):
+    if asset['name'].endswith('2.12.vdi.gz'):
         print(asset['browser_download_url'])
 EOF
 )
