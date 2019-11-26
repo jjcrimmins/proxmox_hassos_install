@@ -51,8 +51,8 @@ r = requests.get(url).json()
 if 'message' in r:
     exit()
 for asset in r['assets']:
-    if asset['name'].endswith('2.12.vdi.gz'):
-        print(asset['browser_download_url'])
+    if asset['name'].endswith('vdi.gz'):
+        print(asset['https://github.com/home-assistant/hassos/releases/download/2.12/hassos_ova-2.12.vdi.gz'])
 EOF
 )
 if [ -z "$URL" ]; then
