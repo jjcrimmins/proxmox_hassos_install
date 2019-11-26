@@ -46,7 +46,7 @@ echo -e "\n\n\n" \
     "********************************\n"
 URL=$(cat<<EOF | python3
 import requests
-url = 'https://api.github.com/repos/home-assistant/hassos/releases/tags/:2.12'
+url = 'https://api.github.com/repos/home-assistant/hassos/releases/tags/2.12'
 r = requests.get(url).json()
 if 'message' in r:
     exit()
